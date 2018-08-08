@@ -1,0 +1,184 @@
+<!--------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------Created by Dharani Peri 8/8/2018-------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+        <script src="http://cdn.wideskyhosting.com/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/Main.js"></script>
+
+</head>
+<body>
+<div>
+    <header>
+                <h1>Goal</h1>
+                <div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Study in Abroad</a>
+                                    <ul>
+                                        <li><a href="#">Bachelors</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Masters</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">PhD</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Study in India</a>
+                                    <ul>
+                                        <li><a href="#">Bachelors</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Masters</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">PhD</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                </div>
+            </header>
+        </div>
+
+	<div>
+		<div>
+			<form method="post" action="">
+				<span>
+					Get In Touch!
+				</span>
+
+                            <br>
+
+				<div class="required">
+					<span>Your Name</span>
+					<input type="text" name="name" id="name" onkeyup="myFunctionLetters(this)" placeholder="Enter your name" >
+					<span></span>
+				</div>
+                            <br>
+
+                            <div class="required">
+					<span>Phone:</span>
+                                        <input type="text" name="phone" maxlength="13" size="10" onkeyup="myFunctionNumbers(this)" id="phone" placeholder="Enter your Phone number" >
+					<span></span>
+				</div>
+                            <br>
+
+                            <div class="required">
+					<span>Email</span>
+					<input type="email" name="email" id="email" onchange="javascript:myFunctionEmail()" placeholder="Enter your email addess">
+					<span></span>
+				</div>
+                            <br>
+
+				<div class="required">
+					<span>I am currently pursuing:</span>
+					<div>
+						<select name="Study">
+							<option></option>
+                                                        <option value="1">Masters </option>
+                                                        <option value="2">Bachelors </option>
+                                                        <option value="3">Intermediate </option>
+                                                        <option value="4">High School</option>
+						</select>
+					</div>
+					<span></span>
+				</div>
+
+                            <br>
+
+                            <div class="required">
+					<span>Subject:</span>
+					<input type="text" name="Subject" maxlength="150" placeholder="Enter Subject">
+					<span></span>
+				</div>
+                            <br>
+
+				<div class="required">
+					<span>Message</span>
+                                        <textarea name="message" maxlength="10000" placeholder="Your message here..."></textarea>
+					<span></span>
+				</div>
+
+                            <br>
+
+				<div>
+					<div>
+
+                                            <input type="submit" value="submit" id="submit" onclick="formcheck(); return false">
+
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div>
+            <footer>
+                <h3>footer</h3>
+            </footer>
+        </div>
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
