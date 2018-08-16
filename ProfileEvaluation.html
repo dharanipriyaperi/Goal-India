@@ -60,6 +60,7 @@
                             </ul>                                
                         </li>
                         <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="login.html">Login/Register</a></li>
                     </ul>
                 </nav>
                 </div>
@@ -151,8 +152,8 @@
                                <br> 
                                
                                 <div class="required">
-					<span>Number of arrears/backlogs in Post Graduation</span>
-                                        <input type="text" size="4" maxlength="2" onkeyup="myFunctionNumbers(this)" id="pgarrears" name="pgarears">
+					<span>Number of arrears/backlogs in Post Graduation (0-10)</span>
+                                        <input type="text" size="4" maxlength="2" onkeyup="myFunctionNumbers(this)" id="pgarrears" name="pgarears" onchange="this.value = myFunctionMinMax(this.value, 0, 10)">
                                         <span></span>
                             </div>
                                <br>
@@ -169,7 +170,7 @@
                             <br> 
                                <div class="required">
 					<span>Under Graduation(Bachelors) Percentage/CGPA</span>
-					<input type="text" size="2" name="bachlorsscore" id="ugscore" placeholder="score" >
+                                        <input type="text" size="4" maxlength="5" name="bachlorsscore" id="ugscore" placeholder="score" onkeyup="myFunctionNumbers(this)" >
 					<select name="ugscore" required="required">
 							<option></option>
 							<option>Percentage</option>
@@ -180,8 +181,8 @@
                                <br>
                                
                                <div class="required">
-					<span>Number of arrears/backlogs in Under Graduation</span>
-                                        <input type="text" size="4" maxlength="2" onkeyup="myFunctionNumbers(this)" id="ugarrears" name="ugarears" >
+					<span>Number of arrears/backlogs in Under Graduation (0-45)</span>
+                                        <input type="text" size="4" maxlength="2" onkeyup="myFunctionNumbers(this)" id="ugarrears" name="ugarears" onchange="this.value = myFunctionMinMax(this.value, 0, 45)" >
                                         <span></span>
                             </div>
                                <br>
@@ -189,7 +190,7 @@
                                
                                <div class="required">
 					<span>Intermediate(12th) Percentage/CGPA and year of passing</span>
-                                        <input type="text" id="12thscore" size="4" maxlength="2" name="12thscore" placeholder="score" >
+                                        <input type="text" id="12thscore" size="4" maxlength="4" name="12thscore" placeholder="score" onkeyup="myFunctionNumbers(this)"  >
 					<select name="12thscore" required="required">
 							<option></option>
 							<option>Percentage</option>
@@ -203,7 +204,7 @@
                                
                                <div class="required">
 					<span>10th Percentage/CGPA and year of passing</span>
-                                        <input type="text" id="10thscore" size="4" maxlength="2" name="10thscore" placeholder="score" >
+                                        <input type="text" id="10thscore" size="4" maxlength="3" name="10thscore" placeholder="score" onkeyup="myFunctionNumbers(this)" >
 					<select name="10thscore" required="required">
 							<option></option>
 							<option>Percentage</option>
@@ -254,15 +255,15 @@
                             <div class="required">
 					<span>TOEFL Score (type NA if you have to take the test): </span>
                                         <span>Total</span>
-                                        <input type="text" name="toefltotal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="toefltotal" placeholder="score">
+                                        <input type="text" name="toefltotal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="toefltotal" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 120)">
                                         <span>Listening</span>
-                                        <input type="text" name="toefllistening" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="toefllistening" placeholder="score">
+                                        <input type="text" name="toefllistening" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="toefllistening" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 30)">
                                         <span>Speaking</span>
-                                        <input type="text" name="toeflspeaking" maxlength="2" size="4" id="toeflspeaking" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="toeflspeaking" maxlength="2" size="4" id="toeflspeaking" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 30)">
                                         <span>Reading</span>
-                                        <input type="text" name="toeflreading" maxlength="2" size="4" id="toeflreading" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="toeflreading" maxlength="2" size="4" id="toeflreading" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 30)">
                                         <span>Writing</span>
-                                        <input type="text" name="toeflwriting" maxlength="2" size="4" id="toeflwriting" onkeyup="myFunctionNumbers(this)" placeholder="score">					
+                                        <input type="text" name="toeflwriting" maxlength="2" size="4" id="toeflwriting" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 30)">					
                                         <span></span>
                             </div>
                                <br> 
@@ -270,15 +271,15 @@
                             <div class="required">
 					<span>IELTS Score (type NA if you have to take the test): </span>
                                         <span>Total</span>
-                                        <input type="text" name="ieltstotal" maxlength="2" size="4" id="ieltstotal" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="ieltstotal" maxlength="3" size="4" id="ieltstotal" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 9)">
                                         <span>Listening</span>
-                                        <input type="text" name="ieltslistening" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltslistening" placeholder="score">
+                                        <input type="text" name="ieltslistening" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="ieltslistening" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 9)">
                                         <span>Speaking</span>
-                                        <input type="text" name="ieltsspeaking" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltsspeaking" placeholder="score">
+                                        <input type="text" name="ieltsspeaking" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="ieltsspeaking" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 9)">
                                         <span>Reading</span>
-                                        <input type="text" name="ieltsreading" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltsreading" placeholder="score">
+                                        <input type="text" name="ieltsreading" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="ieltsreading" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 9)">
                                         <span>Writing</span>
-                                        <input type="text" name="ieltswriting" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltswriting" placeholder="score">					
+                                        <input type="text" name="ieltswriting" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="ieltswriting" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 9)">					
                                         <span></span>
                             </div>
                                <br> 
@@ -286,28 +287,28 @@
                             <div class="required">
 					<span>GRE Score (type NA if you have to take the test): </span>
                                         <span>Total</span>
-                                        <input type="text" name="gretotal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="gretotal" placeholder="score">
+                                        <input type="text" name="gretotal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="gretotal" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 260, 340)">
                                         <span>Quant</span>
-                                        <input type="text" name="grequant" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="grequant" placeholder="score">
+                                        <input type="text" name="grequant" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="grequant" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 130, 170)">
                                         <span>Verbal</span>
-                                        <input type="text" name="greverbal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="greverbal" placeholder="score">
+                                        <input type="text" name="greverbal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="greverbal" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 130, 170)">
                                         <span>Analytical Writing</span>
-                                        <input type="text" name="greawa" size="4" maxlength="3" onkeyup="myFunctionNumbers(this)" id="greawa" placeholder="score">
+                                        <input type="text" name="greawa" size="4" maxlength="3" onkeyup="myFunctionNumbers(this)" id="greawa" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 6)">
                             </div>
                                <br> 
                             
                             <div class="required">
 					<span>GMAT Score in points (type NA if you have to take the test): </span>
                                         <span>Total</span>
-                                        <input type="text" name="gmattotal" maxlength="3" size="4" id="gmattotal" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="gmattotal" maxlength="3" size="4" id="gmattotal" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 0, 800)">
                                         <span>quant</span>
-                                        <input type="text" name="gmatquant" size="4" maxlength="2" id="gmatquant" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="gmatquant" size="4" maxlength="3" id="gmatquant" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 200, 800)">
                                         <span>verbal</span>
-                                        <input type="text" name="gmatverbal" size="4" maxlength="2" id="gmatverbal" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="gmatverbal" size="4" maxlength="3" id="gmatverbal" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 200, 800)">
                                         <span>Reasoning</span>
-                                        <input type="text" name="gmatreasoning" maxlength="2" size="4" id="gmatreasoning" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <input type="text" name="gmatreasoning" maxlength="2" size="4" id="gmatreasoning" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 8)">
                                         <span>Analytical Writing</span>
-                                        <input type="text" name="gmatawa" maxlength="3" id="gmatawa" size="4" onkeyup="myFunctionNumbers(this)" placeholder="score">					
+                                        <input type="text" name="gmatawa" maxlength="3" id="gmatawa" size="4" onkeyup="myFunctionNumbers(this)" placeholder="score" onchange="this.value = myFunctionMinMax(this.value, 1, 6)">					
                                         <span></span>
                             </div>
                                <br>
