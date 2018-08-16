@@ -6,11 +6,84 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//////////////////////////////////signin function ready check begin//////////////////////
+$(document).ready(function(c) {
+	$('.sinup-close').on('click', function(c){
+		$('.setting').fadeOut('slow', function(c){
+	  		$('.setting').remove();
+		});
+	});	  
+});
+//////////////////////////////////signin function ready check end//////////////////////
+
+//////////////////////////Password match check begin////////////////////////////////
+
+$(document).ready(function(){
+        var $submitBtn = $("#form input[type='submit']");
+        var $passwordBox = $("#password");
+        var $confirmBox = $("#confirm_password");
+        var $errorMsg =  $('<span id="error_msg">Passwords do not match.</span>');
+
+        // This is incase the user hits refresh - some browsers will maintain the disabled state of the button.
+        $submitBtn.removeAttr("disabled");
+
+        function checkMatchingPasswords(){
+            if($confirmBox.val() !== "" && $passwordBox.val !== ""){
+                if( $confirmBox.val() !== $passwordBox.val() ){
+                    $submitBtn.attr("disabled", "disabled");
+                    $errorMsg.insertAfter($confirmBox);
+                   
+                }
+            }
+        }
+
+        function resetPasswordError(){
+            $submitBtn.removeAttr("disabled");
+            var $errorCont = $("#error_msg");
+            if($errorCont.length > 0){
+                $errorCont.remove();
+            }  
+        }
+
+
+        $("#confirm_password, #password")
+             .on("keydown", function(e){
+                /* only check when the tab or enter keys are pressed
+                 * to prevent the method from being called needlessly  */
+                if(e.keyCode === 13 || e.keyCode === 9) {
+                    checkMatchingPasswords();
+                }
+             })
+             .on("blur", function(){                    
+                // also check when the element looses focus (clicks somewhere else)
+                checkMatchingPasswords();
+            })
+            .on("focus", function(){
+                // reset the error message when they go to make a change
+                resetPasswordError();
+            });
+
+    });
+//////////////////////////Password match check end////////////////////////////////
+
+/////////////////////////password strength check begin///////////////////////////
+function myFunctionCheckPassword(){
+        var password = document.getElementById("password");
+        var filter = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if (!filter.test(password.value)) {
+            alert('Please see that your password contains atleast one of a digit, lower case letter, upper case letter and a special character');
+            password.focus();
+            return false;
+        }
+        return true;
+    }
+
+//////////////////////////password strength check end///////////////////////////////////
 
 /////////////////////////////////jquery form validation ready///////////////////////////////            
 $('document').ready(function(){
-                $("form").validate()
-            })
+                $("form").validate();
+            });
 /////////////////////////////////jquery form validation ready///////////////////////////////            
             
 //////////////////////////////////////letters Validation begin///////////////////////////
@@ -59,19 +132,19 @@ function myFunctionEmail() {
     }
 //////////////////////////////////////email Validation end///////////////////////////
 
+//////////////////////////////////////minmax Validation begin///////////////////////////
+function myFunctionMinMax(value, min, max)
+{
+    if(parseInt(value) < min || isNaN(parseInt(value))) 
+        return NaN; 
+    else if(parseInt(value) > max) 
+        return alert('Number should not be greater than '+ max); 
+    else return value;
+}
 
+//////////////////////////////////////minmax Validation end///////////////////////////
 
 /////////////////////////////////////final submit begin/////////////////////////////
-//function myFunctionHome() {
-//    
-//    if (confirm('your profile is successfully submitted. We will get back to you within 48 hours with a personalized feedback. Thank you for your patience'))
-//    {
-//        window.location.href = "index.html";
-//    } 
-//    else
-//        window.location.href = "ProfileEvaluation.html";
-//    
-//}
 
 function formcheck() {
   var fields = $(".required")
