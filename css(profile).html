@@ -1,0 +1,444 @@
+﻿
+<style>
+    h1 { text-align:center; 
+        font-size: 40px;
+    }
+    body{
+        background: linear-gradient(to right, #ffffff 0%, #ccffff 100%);
+        }
+        
+    span{
+        font-size:19px;
+        }
+
+    span.head{
+        font-size:40px;
+        text-transform: capitalize;
+        margin: 500;
+         
+        }
+
+    input{
+                  width: 15%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                      box-sizing: border-box;
+                  font-size:15px;
+                  text-color: rgb(7,0,7);
+            }
+
+    input,select {
+                  width: 15%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                      box-sizing: border-box;
+                  font-size:18px;
+                  text-color: rgb(7,0,7);
+            }
+
+    input,file {
+                  width: 15%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                      box-sizing: border-box;
+                  font-size:15px;
+                  text-color: rgb(7,0,7);
+            }
+
+    input[type=submit] {
+                    width: 20%;
+                    background-color: rgb(10,130,200);
+                 color: white;
+                  padding: 14px 20px;
+                   margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size:17px;
+            }
+    textarea{
+                margin: 50;
+
+
+            }
+    
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile evaluation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/Main.js"></script>
+        <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+        <script src="http://cdn.wideskyhosting.com/js/jquery.validate.js"></script>
+        
+</head>
+<body>
+<div>
+    <header>
+                <h1>GOAL</h1>
+                <hr>
+                
+
+    <div>
+        <div>
+                    <form method="post" action="">
+                <span class="head">
+                    Profile Evaluation
+                </span>
+                            <br>
+                            <div>
+                                Give your profile and get it evaluated by our experts
+                            </div>
+                            <br>
+                            <div style="color:red">write NA wherever not available</div>
+                            <br>
+                <div class="required">
+                    <span>Name</span>
+                                        <input type="text" name="name" id="name" onkeyup="myFunctionLetters(this)" placeholder="Enter your name" >
+                    <span></span>
+                                        <script>
+                                           
+})
+                                        </script>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                    <span>Date of Birth</span>
+                                        <input type="date" name="dob" id="dob" onkeyup="myFunctionDob(this)" min="1985-01-02" >
+                    <span></span>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                            
+                    <span>City</span>
+                    <input type="text" name="city" id="city" onkeyup="myFunctionLetters(this)" placeholder="Enter your City" >
+                    <span></span>
+               
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                        <br><br><div class="required">
+                    <span>Phone:</span>
+                                        <input type="text" name="phone" maxlength="13" size="10" onkeyup="myFunctionNumbers(this)" id="phone" placeholder="Enter your Phone number" >
+                    <span></span>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                    <span>Email</span>
+                                        <input type="email" name="email" id="email" onchange="javascript:myFunctionEmail()" placeholder="Enter your email addess">
+                    <span></span>
+                </div>
+                                <br>
+                <div class="required">
+                    <span>I am currently pursuing:</span>
+                    
+                                        <select name="study" id="study">
+                            <option></option>
+                                                        <option value="1">Masters </option>
+                                                        <option value="2">Bachelors </option>
+                                                        <option value="3">Intermediate </option>
+                        </select>
+                    
+                                        <span></span>                                        
+                </div>
+                                
+                                <br>
+                                <div>
+                               <div class="required">
+                    <span>Post-graduation (Master’s degree) degree title, college/university name,duration (eg. 2 years & 2017-2019):
+</span>
+                                  <br> <br><textarea name="pgdetails" id="pgdetails" maxlength="200" onkeyup="myFunctionNumbersLetters(this)" 
+                                        rows="4" cols="50" placeholder="Your details here..."></textarea>
+                    <span></span>
+                </div>
+                            <br> 
+                            <div class="required">
+                    <span>Post Graduation(Masters) Percentage/CGPA</span>
+                    <input type="text" size="2" name="mastersscore" id="pgscore" placeholder="score">
+                    <select name="pgscore" required="required">
+                            <option></option>
+                            <option>Percentage</option>
+                            <option>CGPA</option>
+                    </select>
+                                        <span></span>
+                            </div>
+                               <br> 
+                               
+                                <div class="required">
+                    <span>Number of arrears/backlogs in Post Graduation</span>
+                                        <input type="text" size="4" maxlength="2" onkeyup="myFunctionNumbers(this)" id="pgarrears" name="pgarears">
+                                        <span></span>
+                            </div>
+                               <br>
+                               
+                                </div>
+                                
+                                <div>
+                               <div class="required">
+                    <span>Under graduation (Bachelors degree) degree title, college/university name,duration (eg. 4 years & 2015-2019):
+</span>
+                    <br><br><textarea name="ugdetails" id="ugdetails" maxlength="200" onkeyup="myFunctionNumbersLetters(this)" rows="4" cols="50" placeholder="Your details here..." ></textarea>
+                    <span></span>
+                </div>
+                            <br> 
+                               <div class="required">
+                    <span>Under Graduation(Bachelors) Percentage/CGPA</span>
+                    <input type="text" size="2" name="bachlorsscore" id="ugscore" placeholder="score" >
+                    <select name="ugscore" required="required">
+                            <option></option>
+                            <option>Percentage</option>
+                            <option>CGPA</option>
+                    </select>
+                                        <span></span>
+                            </div>
+                               <br>
+                               
+                               <div class="required">
+                    <span>Number of arrears/backlogs in Under Graduation</span>
+                                        <input type="text" size="4" maxlength="2" onkeyup="myFunctionNumbers(this)" id="ugarrears" name="ugarears" >
+                                        <span></span>
+                            </div>
+                               <br>
+                                </div>
+                               
+                               <div class="required">
+                    <span>Intermediate(12th) Percentage/CGPA and year of passing</span>
+                                        <input type="text" id="12thscore" size="4" maxlength="2" name="12thscore" placeholder="score" >
+                    <select name="12thscore" required="required">
+                            <option></option>
+                            <option>Percentage</option>
+                            <option>CGPA</option>
+                    </select>
+                                        <span></span>
+                                        <input type="month" id="12thyp" name="12yearpassing" >
+                                        <span></span>
+                            </div>
+                               <br> 
+                               
+                               <div class="required">
+                    <span>10th Percentage/CGPA and year of passing</span>
+                                        <input type="text" id="10thscore" size="4" maxlength="2" name="10thscore" placeholder="score" >
+                    <select name="10thscore" required="required">
+                            <option></option>
+                            <option>Percentage</option>
+                            <option>CGPA</option>
+                    </select>
+                                        <span></span>
+                                        <input type="month" id="10thyp" name="10yearpassing" >
+                                        <span></span>
+                            </div>
+                               <br> 
+                            
+                            <div class="required">
+                    <span>Degree you are aiming for (include the name of the stream/branch of study):
+</span>
+                    <br><br><textarea name="aimdetails" id="aimdetails" maxlength="200" onkeyup="myFunctionNumbersLetters(this)" rows="4" cols="50" placeholder="Your details here..." ></textarea>
+                    <span></span>
+                </div>
+                            <br>
+                            
+                            <div class="required">
+                    <span>Which academic cycle are you planning to attend in</span>
+                    <select id="cycle" name="cycle" >
+                            <option></option>
+                            <option>Spring/Summer</option>
+                            <option>Fall/Winter</option>
+                    </select>
+                                        <span></span>
+                                        
+                            </div>
+                               <br> 
+                               
+                            <div class="required">
+                    <span>In which country you are planning to pursue your higher studies?
+</span>
+                   <br><br> <textarea id="aimcountries" name="aimcountry" maxlength="200" onkeyup="myFunctionNumbersLetters(this)" rows="4" cols="50" placeholder="Your countries list here..."></textarea>
+                    <span></span>
+                </div>
+                            <br> 
+                            
+                            <div class="required">
+                    <span>If any, what is the reason for choosing those specific countries/universities?
+</span>
+                                <br><br><textarea name="aimcountryreason" id="aimcountryreason" maxlength="400" onkeyup="myFunctionNumbersLetters(this)" rows="4" cols="50" placeholder="Your reason here..."></textarea>
+                    <span></span>
+                </div>
+                            <br>
+                            
+                            <div class="required">
+                    <span>TOEFL Score (type NA if you have to take the test): </span>
+                                        <span>Total</span>
+                                        <input type="text" name="toefltotal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="toefltotal" placeholder="score">
+                                        <span>Listening</span>
+                                        <input type="text" name="toefllistening" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="toefllistening" placeholder="score">
+                                        <span>Speaking</span>
+                                        <input type="text" name="toeflspeaking" maxlength="2" size="4" id="toeflspeaking" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>Reading</span>
+                                        <input type="text" name="toeflreading" maxlength="2" size="4" id="toeflreading" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>Writing</span>
+                                        <input type="text" name="toeflwriting" maxlength="2" size="4" id="toeflwriting" onkeyup="myFunctionNumbers(this)" placeholder="score">                  
+                                        <span></span>
+                            </div>
+                               <br> 
+                               
+                            <div class="required">
+                    <span>IELTS Score (type NA if you have to take the test): </span>
+                                        <span>Total</span>
+                                        <input type="text" name="ieltstotal" maxlength="2" size="4" id="ieltstotal" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>Listening</span>
+                                        <input type="text" name="ieltslistening" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltslistening" placeholder="score">
+                                        <span>Speaking</span>
+                                        <input type="text" name="ieltsspeaking" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltsspeaking" placeholder="score">
+                                        <span>Reading</span>
+                                        <input type="text" name="ieltsreading" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltsreading" placeholder="score">
+                                        <span>Writing</span>
+                                        <input type="text" name="ieltswriting" maxlength="2" size="4" onkeyup="myFunctionNumbers(this)" id="ieltswriting" placeholder="score">                  
+                                        <span></span>
+                            </div>
+                               <br> 
+                               
+                            <div class="required">
+                    <span>GRE Score (type NA if you have to take the test): </span>
+                                        <span>Total</span>
+                                        <input type="text" name="gretotal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="gretotal" placeholder="score">
+                                        <span>Quant</span>
+                                        <input type="text" name="grequant" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="grequant" placeholder="score">
+                                        <span>Verbal</span>
+                                        <input type="text" name="greverbal" maxlength="3" size="4" onkeyup="myFunctionNumbers(this)" id="greverbal" placeholder="score">
+                                        <span>Analytical Writing</span>
+                                        <input type="text" name="greawa" size="4" maxlength="3" onkeyup="myFunctionNumbers(this)" id="greawa" placeholder="score">
+                            </div>
+                               <br> 
+                            
+                            <div class="required">
+                    <span>GMAT Score in points (type NA if you have to take the test): </span>
+                                        <span>Total</span>
+                                        <input type="text" name="gmattotal" maxlength="3" size="4" id="gmattotal" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>quant</span>
+                                        <input type="text" name="gmatquant" size="4" maxlength="2" id="gmatquant" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>verbal</span>
+                                        <input type="text" name="gmatverbal" size="4" maxlength="2" id="gmatverbal" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>Reasoning</span>
+                                        <input type="text" name="gmatreasoning" maxlength="2" size="4" id="gmatreasoning" onkeyup="myFunctionNumbers(this)" placeholder="score">
+                                        <span>Analytical Writing</span>
+                                        <input type="text" name="gmatawa" maxlength="3" id="gmatawa" size="4" onkeyup="myFunctionNumbers(this)" placeholder="score">                    
+                                        <span></span>
+                            </div>
+                               <br>
+                               
+                            <div class="not_required">
+                    <span>Resume/CV (mention job, internship, projects, papers, co-&extra-curricular activities etc):</span>
+                                        <input type="file" name="flie" id="file" accept="file_extension">
+                                       <br><input type="SUBMIT">
+                                        
+                            </div>
+                              </form>
+        </div>
+    </div>
+
+
+<div>
+                <nav>
+                    <ul> 
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Study in Abroad</a>
+                                    <ul>
+                                        <li><a href="#">Bachelors</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Masters</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">PhD</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Study in India</a>
+                                    <ul>
+                                        <li><a href="#">Bachelors</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Masters</a>
+                                            <ul>
+                                                <li><a href="#">Engineering</a></li>
+                                                <li><a href="#">Management</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">PhD</a></li>
+                                    </ul>
+                                </li>
+                            </ul>                                
+                        </li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                </div>
+            </header>
+        </div>
+
+
+ 
+<!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+<!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
